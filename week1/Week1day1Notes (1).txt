@@ -1,0 +1,141 @@
+
+Manual to Automation
+
+-->reduce time
+--->Resources
+
+Automation Testing->Web Automation
+
+Selenium -->web browser
+
+Java - JDK 1.8..
+
+Platform independent
+Robust
+Secured
+Multithread
+Front -end automation -->UI 
+java version "1.8.0_341"
+Java(TM) SE Runtime Environment (build 1.8.0_341-b10)
+Java HotSpot(TM) 64-Bit Server VM (build 25.341-b10, mixed mode)
+
+
+JDK ,JRE, JVM
+JDk-Java Development kit -->dev tools and JRE
+JRE -Java Runtime Environment-->execute the code
+JVM -Java Virtual Machine
+
+
+Eclipse--IDE
+.java-->
+
+English-->bytecode-->machine code-->o's 1's
+=============================================
+Step:1
+=========
+Creating the Package
+
+RightClick the src/main/java-->new-->package
+
+Naming Convention
+
+first letter -->lowercase
+meaningful
+Step:2
+=====
+Create a class
+
+---testcae/template
+
+RightClick the package-->new-class
+Naming Convention
+
+first letter -->UpperCase -->PascalCase
+
+main method-->main ctrl spacebar enter
+syso ctrl spacebar enter
+
+
+=======================
+
+Variables:
+
+Datatype
+
+
+Primitive 
+int,short, long -->numbers
+char-->one single character
+
+deciaml values
+float
+double
+
+
+Non primitive
+
+String
+Array
+
+
+String-->charsequence
+
+Variable Declaration
+
+Datatype varName=value;
+
+=============================
+
+Methods-->Actions done the class
+
+calls
+message,picture, playing, transactions, browsing
+
+method signature
+Accessspecifier
+return type
+methodName
+inputArgument0/value
+
+as rt mn (){
+
+}
+Accessspecifier-->access(limitation) of class variables /actions
+
+Public -->common area, parking, steps, lift, 
+Private-->passwords, doorkey,home wifi
+Protected-->dob,mobile number
+default/package->within to the family--gym/swimming pool/terrace
+
+return type
+void
+datatypes
+
+methodName-meaningful
+camelCase
+
+inputArgument-->0/value
+
+to Access the global variables and methods
+
+create reference for the the class
+
+className ref=new Classname();
+
+ref-->object -->entity-->state and behaviour of the class
+create a instance for the class
+
+
+public class code(){
+Create 2 classes--
+MyMobile
+makeCalls,typeMessage
+
+
+FriendMobile-class
+takePictures
+makeTransactions
+
+Create another class-->Execution class
+create obj for MyMobile-->to call the corresponding methods
+create obj for FriendMobile->to call the corresponding methods
