@@ -1,0 +1,90 @@
+Selenium WebDriver
+==================
+Supports only to automate the web application-->url
+
+does not support ->desktop application -->java libraries
+
+Selenium support all the programming Languages -Java c#, Python,Ruby,JavaScript...
+
+Selenium also supports all browsers..Chrome,Edge,Safari,Opera,firefox...
+
+Selenium is a openSource tool-
+
+QTP/UFT-Quick Test Professional-->tool -->Mercury->Hp--> needs Liscence
+
+Selenium-->to eliminate all the limitations with Mercury
+
+Selenium support all kinds of OS 
+
+
+===============
+Selenium Java:
+
+Open the browser
+Enter the url
+
+Enter the Credentials
+Enter the submit/ Login 
+
+ pom.xml-->project object model
+ 
+WebDriver Architecture:
+
+
+Internal working of Selenium:
+
+Selenium Client Library (Java)-->W3C Protocol-->Driver-->WebBrowser
+												ChromeDriver-->ChromeBrowser
+									ApiCall-->	FireFoxDriver-->firefox browser
+
+Classroom:
+Step:1 Setup the Webdriver for Chrome(WebDriverManager)
+step:2 Create Object for ChromeDriver
+Strp:3 Load the Url  http://leaftaps.com/opentaps/control/main
+
+To Design a webPage-->HTML--HyperTextMarkup language
+ 
+ HTML-->explains what are all the elements the webpage Contains?
+
+<taganame>-->what type of elements-->purple-->div,p,input,label,form
+class ,id ,style,href-->attributes of the element-->brown color
+blue color-->value for the attribute
+
+
+<input class="decorativeSubmit" style="width:65px; margin-left:1px;" type="submit" value="Logout">
+
+DoM-->document object model-->HTML content
+
+
+Locators:-Selenium
+to identify the element in the webpage
+
+8 Locators:
+============
+id---->unique --first prefered locator-->number
+name-->unique-->second--->some whitespaces/duplicated
+class-->unique
+linktext-->a-->anchor tag-->with black text
+partial linktext
+tagname
+xpath-->
+CSS
+
+
+Classroom:2
+Lauch the Browser
+Load the Url
+Maximize the browser
+Enter the username
+Enter the password
+Click Login
+Click CRM/SFA
+Click Leads
+
+http://leaftaps.com/opentaps/control/main
+
+/*
+		 * String property = System.getProperty("webdriver.chrome.driver");
+		 * System.out.println(property);
+		 */
+
