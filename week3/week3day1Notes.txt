@@ -1,0 +1,137 @@
+Primitive Datatype
+int float,short long double char boolean
+
+
+NonPrimitive Datatype
+=======================
+
+String , Array
+
+Array-Collection of data of same datatype
+-Fixed in size
+
+String:   non-primitive datatype
+========
+-class 
+-Immutability -->Cant change 
+
+Declaration
+===========
+String literals
+
+String s="Testleaf";
+
+
+String with new Keyword
+
+String s= new String("Testleaf");
+
+Difference is memory allocation
+
+==================
+Methods in String
+
+length(); ->to find the length of the string
+charAt(index); to find the character at the given index
+toCharAaray(); to convert the String into  character array
+equals: to compare the String Values
+equalsIgnoreCase: to compare the String Values without considering the String cases
+split: to separate the sentance /word based on the delimiter
+subString: to retreive the particular character sequence
+replace :to replace the any character seq
+========================================================================
+
+OOPs: Object Oriented Programming Language
+=====
+Classes -->template
+Object-->state and Behaviour of the class
+-->reuse code
+-->maintain
+
+
+Inheritance
+Polymorphism
+Abstraction
+Enscapsulation
+
+Inheritance:
+============
+
+--to inherit the properties of the parent
+-->Keyword -->extends
+
+parent/BaseClass/class-->child/derived class/subclass
+
+Parent-->child--->single Inheritance
+Grandparent-->parent-->child-->Multilevel
+Parent  brother hierachichial
+		Myself
+Multiple Inheritance is not possible 
+can be acheived with interface
+
+Vehicle-->break, wheels,Wipers,Engiene
+Car-->Ac,autoGear,compact,
+   4 seater, 6 seater 8 seaters
+   Hyundai, Maruthi, BMW, Tat, Kia
+Auto-->3 wheels 
+
+
+Polymorphism:
+===============
+--Many--forms
+CompileTime Polymorphism-->Overloading-->Same Class Same MethodName with arguments
+Static binding
+    -inputs can be different 
+
+
+
+Runtime Polymorphism-->Overriding-->Same Methodname and SameArguments in different Classes
+--Inheritance concept
+
+super--Keyword helps to access the parent property of overrriden method
+
+
+Classroom:1
+*************
+Find the count of given character in a String
+String input="TestLeaf";
+//To get the count of e;
+Goal: To understand the String, loop, if 
+a) Create a class by name: FindCharCount (with main method) in same package
+initialize the count variable 
+count =0;
+b)Convert the String to character array (use toCharArray)
+c)Use forloop to iterate each character in the array
+d)Compare with the input with the required character using if condition (==) 
+e)if matches, keep adding the count. Finally, print the count.
+f) Run and Confirm the correct character count is printed in console
+
+
+Classroom:2
+===========
+Create a parent class Vehicle
+Create methods applyBreak() and soundHorn()
+Create a subclass Auto extends Vehicle
+Create methods noOfWheels() and autoStart();
+Create a subclass Car extends Vehicle
+Create methods applyGear() and addLuxury();
+Create Transport(Execution Class) extend Vehicle
+Create object for Transport and call the all class/subclass methods
+
+ClassRoom:3
+============
+Create class Calculator with below Methods:
+- 2 methods for add (1 method with 3 args)
+- 2 methods for add (1 method with 2 int agrs)
+- 2 methods for add(1 methods with 2 double args)
+- 2 methods for add (1 methods with 1 double arg and 1 int arg)
+Create Object for Calculator class, and execute all methods
+
+ClassRoom:4
+============
+     Class     :BankInfo
+     Methods :saving(),fixed(),deposit()
+     Class     :AxisBank
+     Methods :deposit()
+Description:
+You have to override the method deposit in AxisBank.
