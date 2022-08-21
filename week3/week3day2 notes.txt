@@ -1,0 +1,125 @@
+Agenda for sunday
+
+8.45 to 9 am	Recap
+9.00 to 10.15am	Abstraction
+10.15 to 10.35 am	classroom
+10.35 to 10.45am	Break
+10.45 to 11.30am      List
+11.30 to 11.50am	Classroom
+11.50 to 12.00pm	break
+12.00 to  12.45pm	Set
+12.45 to  1.00pm	Classroom
+1.00 to 1.15pm 	Recap
+==================================================
+
+
+Abstraction-->Hiding the details (unwanted datas)-->Providing us the relavant datas
+
+-->reduce the complexity of project
+
+Abstract class--->0 to 100% abstraction
+Interface-->100% of Abstraction
+
+Cannot create Object/instantiate the abstract/interface class
+
+
+Abstract class:
+==============
+-->implemented and unimplemented methods
+-->normal method and design
+--uses keyword -extends
+
+Interface-->100% abstraction
+===========
+-->have only design
+-->only unimplemented methods
+-->uses keyword -->implements
+
+
+Interface extend other Interface --->use inheritance
+class implements-->interface
+class cannot extend the interface
+============================================
+Collection Interface
+
+List 
+Set
+
+Array-->fixed size-->cannot  increase or decrease the size of array
+
+
+List-->interface -->to store dynamic datas
+-->can grow/ Shrink
+-->Maintains the insertion order
+-->allows Duplicate datas
+
+ArrayList-->index based-->access the element-->No much modification
+LinkedList-->Pointer-->insert /deletion-->
+
+
+Set
+===
+-will not allow the duplicates
+3 implementation classess
+HashSet-->random
+LinkedHAshSet-->Insertion order
+Treeset-->ASCII
+
+
+
+
+
+
+
+
+
+add
+remove
+clear
+get
+contains
+size
+
+
+
+Classroom:1
+==========
+Create an Interface for the Mobile !
+Write 3 methods (abstract) - sendSMS, dialNumber, switchOn
+Create a concrete Class - IPhone (-> Mobile)
+Make sure all 3 methods appear and 
+Also make sure you could not create object for Interface !
+
+
+ClassRoom:2
+==========
+List - {Adam,Ben, Zara, Adam, Charlie, James, Ben} 
+Add into the list
+Convert the list to set
+Print the unique set
+
+ 
+ClassRoom:2
+==========
+ 1. List - {Adam,Ben, Zara, Adam, Charlie, James, Ben} 
+Print only the duplicate - Adam, Ben 
+ 2. List - {Adam,Ben, Zara, Adam, Charlie, James, Ben, Adam, George, Adam} 
+Print the number of times Adam Occured - Adam - 4
+
+classroom:3
+=========
+Print only unique characters in the given string
+String companyName = "google" --> "gole"
+Time: 15 minutes
+Hints: 
+Use Set with add method.
+
+Classroom Assignment 1: (List)
+==============================
+1) Go to https://amazon.in
+2) Type phones
+3) Print price of every phone
+4) Print the lowest price !
+Hints: 
+Look what is common locator for all price info of every phone. 
+Use Collection sort to get the lowest price
