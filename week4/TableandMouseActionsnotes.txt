@@ -1,0 +1,71 @@
+WebTable-->HTML Table
+========
+
+<table> -->tag name -->confirm that as WebTable
+
+Table  -->rows and Column
+
+Tabular format of holding data
+
+---Static Table ->Fixed row and column--4 row 5 column->Calendar
+---Dynamic Table-->Rows and Column will be changing
+
+Structure of WebTable
+=================
+<table> -->table name
+      <tbody> -->table Body-->includes all the rows and columns
+     <th></th>-->th-->table header for the columns
+     <tr>-->table rows
+	<td></td>-->table data -->contents -->cell data
+         </tr> 
+              <tr>
+	<td></td>
+	<td></td>
+	<td></td> 
+        </tr> 
+ </tbody>
+ </table>
+
+Table-->2nd row and 3rd col--->
+
+tablename-->tr[3]-->td[4]
+
+
+=========================================
+Actions class-->AUI -Advanced User Interaction
+==========================
+Scroll
+click 
+drad
+doubleclick
+rightclick
+Actions act=new Action(driver)
+
+Mouse Hover-->to place the mouse on the Element
+moveToElement()
+leftclick-->normal click-->click()
+rightClick-->contextClick()
+
+pause(millsec)--adding wait in the sequence
+
+
+Classroom
+==========
+Erail:
+Step:1-Launch the url (https://erail.in/)
+Step:2-Enter From as MAS
+Step:3-Enter To as MDU
+Step:4-Uncheck sort on Date  
+Step:5-Get the Train Names
+DataTable TrainList TrainListHeader-TableName
+
+
+Ensure whether there are duplicate train names
+Hint:use size() to check duplicate
+
+
+
+
+
+
+
