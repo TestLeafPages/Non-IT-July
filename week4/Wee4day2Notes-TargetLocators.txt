@@ -1,0 +1,124 @@
+Agenda for Sunday
+===================
+
+9 to 9.40  			Alert concept
+9.40 to 10.00am 	Classroom
+10.00 to 10.45am	Frame concept
+10.45 to 11.10am 	Classroom
+11.10 to 11.30am	Break
+11.30 to 12.15pm	Window Handling
+12.15 to 12.45pm	Classroom
+12.45 to 1.00pm		Snapshot
+===============================
+
+Alert;
+=====
+   --Information /message /warning/confirmation/message from the application
+   --Seenium only the message from the application.
+	--JavaScript fn-->it cannot be inspected
+	--Without handling the alert --other elements of the webPage cannot be accessed
+
+Types of Alerts
+===============
+Modal Alert
+
+SimpleAlert--> only one button to accept the alert
+Prompt Alert-->Giving info in the alert box and then confirm the message
+Confirmation Alert-->two options-->accept/reject
+
+Non -Modal alert -Sweet Alert
+===============
+---Can be inspectable as like normal webElement
+
+=======================
+
+Actions performed with Alert:
+===========
+accept
+reject
+sendKeys
+get the text
+
+How to handle Alert:
+==================
+--transfering the driver control from the webPage to alert box
+
+driver-->switchTo-->alertbox-->actions as required
+
+Exception:
+==========
+if not handled the alert->Exception UnhandledAlertException will be thrown
+if not alert is present and try to handle the alert -->NoAlertPresentException
+
+Classroom:1
+Lauch the url https://www.leafground.com/alert.xhtml
+Click the button under Prompt Dialog
+Handle the Alert either accept or Dismiss
+Hint: Before accept/dismiss use senkeys to the alertbox
+Verify it
+
+
+Frame
+======
+Dom inside Dom
+HTML in HTML
+
+single Frame
+Nested Frame 
+
+
+To handle the frame
+driver-->frame-->act ont the element
+driver-->frame1-->frame2-element->frame3-->act on the element
+
+to switch between the nested frame
+	-->	driver.switchTo().parentFrame();
+
+
+===========================
+Window Handling
+
+Lauch the browser-->session id will created for the driver ..
+
+
+address for each window opened by my application -->window handler
+
+getWindowHandle()-->get the current window address
+getWindowHandles()-->get the address of availabled opened windows
+
+Step to transfer the driver control to the next/child windows
+==========================================================
+
+getWindowHandles();
+convert the set to list
+switch to required window using listname.get(index)
+
+Classroom:
+=========
+1_ Open Chrome
+2_ Load https://www.w3schools.com/js/tryit.asp?filename=tryjs_confirm
+3_ Click TryIt 
+4_ Click Cancel/ on the alert
+5_ Print the resulting text
+
+ Hint:
+-----
+Switch to the frame
+Then click Try It with xpath
+Switch to the alert
+Then perform accept / dismiss
+Get the text using id 
+Verify the text based on the action
+
+
+Alerts and Window handling
+---------------------------
+1. Load https://www.irctc.co.in/
+2. Click on OK button in the dialog  
+3. Click on FLIGHTS link            
+4. Go to the Flights tab
+5. Print title of the child window and close the window
+6. close all windows
+
+
+
