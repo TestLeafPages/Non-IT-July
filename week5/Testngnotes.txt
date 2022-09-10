@@ -1,0 +1,148 @@
+Agenda:
+========
+9.00  to 9.40 am	TestNg Introduction & TestNg First Script
+9.40  to 9.50 am 	Breakoutsession
+9.50  to 10.25 am   Xml Structure and TestNG Seq
+10.25 to 10.45 am 	Breakout Session
+10.45 to 11.00 am   Break
+11.00 to 11.20 am	Parallel
+11.20 to 11.40 am	Breakoutsession
+11.40 to 12.40 pm	Annotations
+12.40 to 1.00  pm 	Breakout session
+1.00  to 1.15  pm	Recap
+
+=====================================
+TestNg-->Test Next Generation
+======
+
+  --Execution Framework /Unit testing framework
+  --Cedric Beust 
+  
+  junit-->java
+  nunit-->.net
+  
+  ========
+  Selenium Script:(Individual)
+  ================
+  
+  -Execute multiple testcases in a single run -Not possible
+  In real time  project--> 4000 testcases
+  
+  Smoke --100 testcases
+  Regression --50 testcases
+  
+ - No Status
+ -No reports will be generated 
+  -Can't use multiple set of data
+   
+  
+  Advantage:
+  ==========
+  -Supports to execute multiple testcases in a single run sequentially 
+  -supports parallel execution
+  -Provide the status of the testcase as Pass/Fail
+  -Generate the Report-Execution Summary
+  -Supports multiple set of data-->data driven framework/Parametrization
+  -Helps to control the flow of the execution Annotations and attributes 
+  -supports Rerun the failed testcases
+  -Validate the testcases --Assertion
+  
+  Pre requisite:
+  ==============
+Install Testng plugin-->Compilation
+Testng dependencies-->jar file
+
+To Convert Normal java code into Testng Script
+==============================================
+1. Remove the static , String[] args from the mainmethod syntax and rename the method with meaningful name
+2.Add @Test on  top of the method
+3.Import @Test from org.testng.annotations
+
+TesstNg Xml Structure
+=====================
+<suite>-->Topmostlayer of the project ..
+under this <test> -->it includes multiple testcases based on testtypes-regression/smoke, modules
+				<classes>
+				   <class>
+TO Execute multiple Testcases -sequentially -->one after the other
+=============================
+1.Select Testcases with @Test annotations
+2.Right click -->TestNg-->Convert to Testng
+
+Test-Output folder
+===================
+Reports -2
+  Emailable Report
+  Index.html report
+  
+Failed Testcases
+==================
+  testng-failed.xml-->number of failed testcases
+
+To Execute the testcases Parallely
+==================================
+1.Select Testcases with @Test annotations
+2.Right click -->TestNg-->Convert to Testng-->rename the xml file
+3.Add the attribute--Parallel
+==========================================================================
+
+Annotations-Set of code to control the flow of Execution
+==============
+--Optionals
+
+beforesuite -->Always execute once for all tests-->cloud setup
+	beforetest-->Always execute before all the classes-->db
+      beforeclass -->Configuration report 
+        beforemethod-->PreCondition Steps
+	         @Test//mandatory
+		aftermethod-->postcondition
+	  afterclass-->conclude report
+	aftertest-->close db
+aftersuite-->stop 
+
+
+BeforeSuite-->
+BeforeTest
+Beforeclass
+BeforeMethod
+Executing Test1 testcase
+AfterMethod
+BeforeMethod
+Executing test2 testcase
+AfterMethod
+AfetClass
+AfterTest
+
+
+
+
+Classroom:1
+========
+https://github.com/TestLeafPages/SelAug2021/blob/main/testcase.zip
+2. Download testcase.zip
+3. Extract the zip file
+4. copy the testcase folder
+5. paste it under scr/main/java
+
+Steps to convert standalone testcase into TestNG testcase
+----------------------------------------------------------
+1. Remove static keyword from main method
+2. Remove String[] args argument
+3. Rename main() into meaningful method name
+4. Apply @Test on top of the method
+============================================
+Class room
+=========
+Eecute the testcase Sequentially and parallel
+Steps: Select the testcases-->rightclick Testng-->convert to TestNg
+For Parrallel-->select parallel mode-Classes
+
+===============================================================
+Classroom:
+===========
+Create a baseclass -->place all the common steps from testcases
+	Create a method as preCondition -->place steps-->annotate with @BeforeMethod
+	Create a another method as postCondition-->place common step-->annotate with @AfterMethod
+
+Testcases -->remove all the common steps and extend the baseclass to all the testcases
+Declare the driver globally and then remove local declaration
