@@ -1,0 +1,119 @@
+
+Agenda:
+=======
+Attributes
+Parametrization
+
+
+========
+Attributes
+=========
+Testcases will execute in ascii Order
+
+1.Priority-->prioritize the testcases(Schedule the testcases)
+  priority=1
+  default value =0
+  lowest prioritized test method will be executed first
+  
+2.Enabled-->to ignore the testcase from the execution
+   enabled=false
+   default value=true
+
+3.invocationCount-->to execute the testcase multiple times
+   invocationCount=5 (Number of times to be executed)
+   default value=1
+   
+4.threadPoolSize -->to execute testcase in different Threads
+  threadPoolSize=3-->comes along with the invocationCount
+  default Value =0
+
+5.invocationTimeOut-->set timeout for invocationCount
+  invocationTimeOut=2000;
+  
+6.dependsOnMethods-->to inject the dependency
+  if the individual fails-->dependent method wil be skipped
+  dependsOnMethods={"packagename.classname.methodname"}
+  
+7.alwaysRun-->will forcefully execute the dependent testcase irrespective of the status of the individual testcase
+  alwaysRun=true
+  defaultvalue =false
+  
+8.TimeOut-set timout for the testcase
+ timeOut=500
+==========================================
+Parametrization: ->Pass the data to the testcase
+================
+
+Static Parametrization
+Dynamic Prarametrization
+=============================
+
+Static Parametrization 
+=====================
+
+Static data-->common data to all testcases
+ -->url, username,password,browser
+    values to this 
+
+demoSalesManager-->English
+DemoCSR2 -->French Language
+
+@Parameter
+<parameter>
+
+Steps for static parametrization
+===================================
+Step:1
+In Xml-->
+<parameter name="url" value="http://www.google.com"></parameter>
+  
+Step:2
+  In Commonclass/baseclass
+ @Parameters({"url"})
+ 
+Step:3
+   Passed the argument to the precondition method(@BeforeMethod)
+   
+ 
+
+Dynamaic Parametrization:
+=========================
+Set of test data passed into the testcase
+
+@DataProvider
+dataProvider-->attribute
+
+
+header 
+values
+
+Companyname Firstname Lastname
+Wipro(0,0)	Venila(0,1)	29(0,2)
+Teatleaf	   Vidya		R
+TCS			Vinodhini	D
+Amazon		MuKesh		K
+
+Rows and Columns
+
+Step:1 
+Create 2 dimentional String array in a separate method in testcase with return type String[][]
+String[][] data=new String[size][size]
+
+Step:2
+Annotate the method with @DataProvider 
+
+Step:3
+Add the attribute dataProvider="methodname" to @Test method
+
+Step:4 
+Pass the required argument to the @Test method and pass the value to the teststep
+
+
+
+
+
+
+
+
+
+
