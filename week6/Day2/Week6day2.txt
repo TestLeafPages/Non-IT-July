@@ -1,0 +1,47 @@
+Agenda
+=====
+Selenium Waits
+==============
+Implicit Wait -->global -->applicable only on the findElement and findelements
+Explicit wait-->External wait
+   -->conditional wait
+
+Java Constructor
+=================
+Accspecifier returntype methodname (Arg)-->Normal methodname
+
+Constructor -->special method which has the name as the classname
+-->whenever the obj created->constructor called
+
+-->Constructor doesnot return anyvalue
+
+default constructor
+Parametrized Constructor
+
+Constructor Chaining
+ calling one Constructor from another constructor
+ 
+ Java Keywords->static, final and this,super
+
+this -->keyword -->to call the current class methods/variables/constructor-->within the class
+
+static-->creates one single memeory and shared among the classes
+final-->a constant value which cannot be changed anywhere of the classes
+
+super-->call the parent class method which is overridden in childclass
+
+
+ 
+
+Classroom:
+Create a class College
+Create a instance variable as collegeName
+Create a static final variable as building fee
+Create a constructor (default)
+Create a parametrized constructor (collegeName, depart)
+Do call the default constructor to print the university
+
+Main method -->pass the value to the parametrized constructor
+
+
+
