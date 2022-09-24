@@ -1,0 +1,76 @@
+Agenda -Page Object Model
+======
+Introduction to POM
+Build the script with POM
+Sequential and Parallel Execution
+
+POM->design pattern- >to build a framework
+
+  -->When there is a change in the locator value of any WebElements,
+  we need the change the value manually where ever applied in the testcase
+  
+  -->when ther is any change in the locator /attribute of the webelement
+  we need the change the locator itself manually where ever applied in the testcase
+  
+-->Any changes made the existing webelements affects the execution..
+
+To handle all these issue:
+=========================
+POM -->rectifies /provides solution 
+
+Adv:
+===
+-->Uniformity
+-->Better Productivity
+--->Reduce code redundancy/reduce the duplication of line of codes
+--->Reusability
+-->Easy maintainence of code
+
+===================================
+
+POM-->design pattern which is to create object repository for the webElements/UI elements in test automation
+
+
+
+Rules to setup:
+
+1.Create package -->Base Class-->PreCondition /postcondition/Dataprovider
+2. Create package -->pages-->??-->the each and every navigation of the application
+3.Create package -->testcase-->action
+4.Create package -->Utils-->ReadExcel file-->test data
+
+
+To CreateLead:
+==============
+
+LoginPage-->WelcomePage-->MyhomePage-->Leadspage-->Createlead-->ViewLead
+
+
+1.Create a baseclass to have all the common steps of the application
+2.In page package-->Create a java class for every web page -->show the navigation
+                 -->Extend all the pages with projectspecific method
+				 --->create a separate methods for each and every actions in webPage and add return type
+				 
+				 **To access the methods in a class -->object /this
+				 **To access the local variable out the method -->return
+				 
+				 @Test-->@BeforeMethod-->@Test-->pages
+3.Create the testcase for each scenario like login logout /createlead
+4.Declare the driver as static
+5.Convert the testcases into testng.xml file for sequential Execution
+6.Integrated the data provider-->added arguments to the pages and add @BeforeTest to set the filename
+
+Issue with parallel execution
+===========================
+Cannot use static keyword,
+    requirement of different instances for parallel execution  
+    Without static-->no connection between testcase and pages
+	
+	
+	To rectify :
+	=============
+	To run parallel
+	**Created constructor call for each java class (each page)
+	**Assigned the local to global using this keyword
+	**Where the page is returned to next page, driver instance is passed
+	**Pass the driver instance to the testcases
