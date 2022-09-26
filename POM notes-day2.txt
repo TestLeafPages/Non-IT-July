@@ -1,0 +1,88 @@
+	
+Agenda
+=======
+Exception handling
+
+ExtentReport and its integration with POM
+
+
+Exception:-->unexpected event
+=========
+   Error  -->Memory issue-->hardware issue
+   Exception-->unexpected which disturbs the flow of execution and can it can be handled
+   
+   Checked Exception-->compile time Exception-->
+   
+   Unchecked Exception-->Runtime Exception-->All selenium and java 
+   
+   To handle the Exception:
+   ===========================
+ -->try -catch block
+ -->try with multiple catche blocks
+-->nested try catch 
+-->finally block-->it will execute the code ..exception handled by  try/catch or the exception has not handled
+     -to excute the important the script
+	 
+Difference throw and throws;
+
+throw -->user will explicitly need to throw any exception 
+		-->works within the method
+throws -->method signature level -->may or maynot get exception 
+
+Extent Report-->third party api
+    -add dependency in pom.xml
+    ExtentHtmlReporter class-->set the path 
+	ExtentReports-->to get the actual data from the testcase
+	ExtentTest->add the details of the testcase
+		
+	setAppendExisitng -->to have the history of report
+	attachReporter-->add the report into the html file
+	createTest-->to add the testdetails 
+	pass and fail -->to set the status
+	author and Category
+	
+	mandatory step-->extent.flush();-->collect the report 
+	
+	
+Steps to integrate the ExtentReport
+====================================
+1.Create a method in the baseclass as startReport 
+	Added first 4 steps
+	--> ExtentHtmlReporter class-->set the path 
+	ExtentReports-->to get the actual data from the testcase
+	setAppendExisitng -->to have the history of report
+	attachReporter-->add the report into the html file
+	
+	annotate with @BeforeSuite
+	
+2.Create a method stopReport()
+  -extent.flush
+  annotate with @AfterSuite
+  
+3.create a method as testDetails 
+    -->createTest-->to add the testdetails -->testName and testDesc
+	-->author and category-->author and category
+	
+*note:declare the Extent test, Extent report as public static variable 
+       declare the test details variable as public string 
+	   
+	   annotate with @BeforeClass	   
+	   add the values for the test details in the reuired testcase under @BeforeTest 
+	   
+4.Create a reportStep method
+   using if else condition pass the message and status to the teststeps/testcase methods
+   
+5.Call the report step method in all the pages using try -catch block
+
+6.To add Screenshot to the reportStep
+ MediaEntityBuilder
+7.Create method as takeSnap()
+ -->add the snapshot code 
+ -->to keep the separate snapshots -->append random number in the file path.
+8.call the snapshot method in MediaEntityBuilder
+
+9.to separate the report for multiple sets of data 
+
+  node-->subset of ExtentTest  
+  call the method -->createnode
+  change the test into node in the report step
